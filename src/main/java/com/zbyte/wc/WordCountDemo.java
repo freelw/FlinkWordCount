@@ -45,10 +45,7 @@ public class WordCountDemo {
         });
 
         SingleOutputStreamOperator<Tuple2<String, Integer>> sum = tuple2StringKeyedStream.sum(1);
-
         sum.print();
-
         env.execute();
-
     }
 }
